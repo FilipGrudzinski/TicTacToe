@@ -50,15 +50,15 @@ class ViewController: UIViewController {
                     self.label.isHidden = false
                     self.againButton.isHidden = false
                     
-                if gameState[combination[0]] == 1 {
+                    if gameState[combination[0]] == 1 {
                         
-                        label.text =  "Player crosses has won!! "
+                        label.text =  "Crosses has won!! "
                         
-                } else  {
+                    } else  {
                     
-                        label.text =  "Player noughts has won!! "
+                        label.text =  "Noughts has won!! "
                     
-                }
+                    }
                     
                     UIView.animate(withDuration: 1, animations: {
                         
@@ -66,6 +66,10 @@ class ViewController: UIViewController {
                         self.label.center = CGPoint(x: self.label.center.x + 500, y: self.label.center.y)
                         
                     })
+                    
+                } else {
+                    
+                    label.text = "It's a draw"
                     
                 }
 
